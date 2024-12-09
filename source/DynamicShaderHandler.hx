@@ -1,9 +1,8 @@
 package;
-#if SHADERS_ALLOWED
+
 import openfl.display.GraphicsShader;
 import flixel.FlxG;
 import flixel.graphics.tile.FlxGraphicsShader;
-import sys.FileSystem;
 
 /*
 	Class to handle animated shaders, calling the new consturctor is enough, 
@@ -34,35 +33,15 @@ class DynamicShaderHandler
 
 	public function new(fileName:String, optimize:Bool = false)
 	{
-		var path = Paths.modsShaderFragment(fileName);
-		trace(path);
-		if (!FileSystem.exists(path)) path = Paths.shaderFragment(fileName);
-		
+		var path = Paths.shaderFragment(fileName);
 		trace(path);
 		var fragSource:String = "";
 
-		if (FileSystem.exists(path))
-		{
-			fragSource = sys.io.File.getContent(path);
-		}
-
 		
-		var path2 = Paths.modsShaderVertex(fileName);
-		trace(path2);
-		if (!FileSystem.exists(path2)) path2 = Paths.shaderVertex(fileName);
-		
+		var path2 = Paths.shaderVertex(fileName);
 		trace(path2);
 		var vertSource:String = "";
 
-		if (FileSystem.exists(path2))
-		{
-			vertSource = sys.io.File.getContent(path2);
-		}
-
-		if (fragSource != "" || vertSource != "")
-		{
-			shader = new FlxGraphicsShader(fragSource, optimize, vertSource);
-		}
 
 		if (shader == null)
 		{
@@ -121,4 +100,3 @@ class DynamicShaderHandler
 		}
 	}
 }
-#end 

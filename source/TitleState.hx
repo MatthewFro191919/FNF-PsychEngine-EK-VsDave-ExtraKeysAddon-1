@@ -15,6 +15,7 @@ import flixel.addons.transition.TransitionData;
 import haxe.Json;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
+import PlayState;
 #if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
