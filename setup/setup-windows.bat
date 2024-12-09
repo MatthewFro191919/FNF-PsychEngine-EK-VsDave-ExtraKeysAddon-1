@@ -15,6 +15,6 @@ haxelib install tjson
 haxelib install json2object
 haxelib git flxanimate https://github.com/ShadowMario/flxanimate dev
 haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
-haxelib git hxdiscord_rpc https://github.com/MAJigsaw77/hxdiscord_rpc
+haxelib install hxdiscord_rpc
 echo Finished!
 pause
