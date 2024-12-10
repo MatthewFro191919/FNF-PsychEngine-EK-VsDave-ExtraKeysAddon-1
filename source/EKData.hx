@@ -43,7 +43,7 @@ class EKData {
 		6 => [
                 "letters" => ["A", "C", "D", "E", "F", "B", "I"], 
                 "anims" => ["LEFT", "UP", "RIGHT", "UP", "LEFT", "DOWN", "RIGHT"],
-                "strumAnims" => ["LEFT0", "UP0", "RIGHT0", "LEFT0", "DOWN0", "RIGHT0"], 
+                "strumAnims" => ["LEFT0", "UP0", "RIGHT0", "SPACE" "LEFT0", "DOWN0", "RIGHT0"], 
                 "pixelAnimIndex" => [0, 2, 3, 4, 5, 1, 8]
             ],
 		7 => [
